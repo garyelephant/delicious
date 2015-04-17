@@ -52,7 +52,7 @@
 </nav>
 <h1>{{ user }} 的购物车</h1>
 {% for order in orders %}
-<h1>{{ order.price.tweet.title }}, {{ order.number }}个, {{ order.price.supplier.name }}, {{ order.price.value }}</h1>
+<h1>{{ order.price.tweet.title }}, {{ order.number }}个, {{ order.price.supplier.name }}, {{ order.price.value }}元</h1>
 {% endfor %}
 <h1>总价: {{ total }}</h1>
 
