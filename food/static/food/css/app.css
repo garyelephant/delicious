@@ -134,7 +134,7 @@ select{
     margin-top: 120px;
 }
 .menu{
-    position: absolute;
+    position: relative;
     height: 40px;
     width: 320px;
     background: #fff;
@@ -205,7 +205,7 @@ select{
     /*font-size: 10px;*/
 }
 .menu .card .info{
-    position: absolute;
+    position: relative;
     margin: 0 auto;
 }
 .menu .card .info p{
@@ -234,9 +234,9 @@ select{
 }
 .menu .material p{
     font-size: 30px;
-    position: absolute;
+    position: relative;
     left: 10px;
-    margin: -10px auto;
+    margin: 0 auto;
 }
 
 table tbody tr{
@@ -272,7 +272,7 @@ table tbody tr .right{
 }
 .menu .process p{
     font-size: 30px;
-    position: absolute;
+    position: relative;
     left: 10px;
     margin: 0 auto;
 }
