@@ -33,23 +33,28 @@
     <meta name="msapplication-TileColor" content="#0e90d2">
 
 
-
-<link type="text/css" rel="stylesheet" href="{% static 'food/materialize/css/materialize.min.css' %}"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'food/materialize/css/materialize.min.css' %}"
+          media="screen,projection"/>
 
 </head>
 <body>
- <script type="text/javascript" src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
- <script type="text/javascript" src="{% static 'food/materialize/js/materialize.min.js' %}"></script>
-  <nav>
+<script type="text/javascript" src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'food/materialize/js/materialize.min.js' %}"></script>
+<nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="components.html">Components</a></li>
-        <li><a href="javascript.html">JavaScript</a></li>
-      </ul>
+        <a href="#" class="brand-logo">Logo</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Sass</a></li>
+            <li><a href="components.html">Components</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+        </ul>
     </div>
-  </nav>
+</nav>
+<h1>{{ user }} 的购物车</h1>
+{% for order in orders %}
+<h1>{{ order.price.tweet.title }}, {{ order.number }}个, {{ order.price.supplier.name }}, {{ order.price.value }}</h1>
+{% endfor %}
+<h1>总价: {{ total }}</h1>
 
 <!--在这里编写你的代码-->
 <!--[if (gte IE 9)|!(IE)]><!-->

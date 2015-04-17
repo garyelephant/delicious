@@ -11,12 +11,24 @@ def index(request):
     return render(request, 'food/index.html', context)
 
 
+def cart(request):
+    orders = Order.objects.all()
+    total = sum([o.number * o.price.value for o in orders])
+    user = orders[0].user.name
+    context = {'user': user, 'orders': orders, 'total': total}
+    return render(request, 'food/cart.html', context)
+
+
 def tweet_detail(request, tweet_id):
     tweet = get_object_or_404(Tweet, pk=tweet_id)
     return render(request, 'food/tweet.html', {'tweet': tweet})
 
 
 def tweet_buy(request, tweet_id):
-    # todo 添加订单
-    return HttpResponseRedirect(reverse('food:index'))
+    user = int(request.POST['user'])
+    number = int(request.POST['number'])
+    price = int(request.POST['price'])
+    o = Order(user=User.objects.get(pk=user), price=Price.objects.get(pk=price), number=number)
+    o.save()
+    return HttpResponseRedirect(reverse('food:cart'))
 

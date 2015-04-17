@@ -102,10 +102,11 @@
 
     <form action="{% url 'food:tweet_buy' tweet.id %}" method="post">
         {% csrf_token %}
+        <input type="hidden" name="user" value="3">
         {% for price in tweet.price_set.all %}
         <p>
-            <input name="group1" type="radio" id="test{{ price.id }}"/>
-            <label for="test{{ price.id }}">{{ price.supplier.name }}, {{ price.value }}元</label>
+            <input name="price" value="{{ price.id }}" type="radio" id="price{{ price.id }}"/>
+            <label for="price{{ price.id }}">{{ price.supplier.name }}, {{ price.value }}元</label>
         </p>
         {% endfor %}
 

@@ -3,8 +3,14 @@ from django.contrib import admin
 from .models import *
 
 
+class OrderInline(admin.TabularInline):
+    model = Order
+    extra = 3
+
+
 class UserAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'photo')
+    inlines = [OrderInline]
 
 
 class PriceInline(admin.TabularInline):
@@ -45,3 +51,4 @@ admin.site.register(Procedure)
 admin.site.register(Comment)
 admin.site.register(Supplier)
 admin.site.register(Price)
+admin.site.register(Order)

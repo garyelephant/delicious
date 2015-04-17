@@ -80,5 +80,14 @@ class Price(models.Model):
     value = models.IntegerField(default=0)
 
     def __unicode__(self):
-        return str(self.value)
+        return '%s: %s, %s' % (self.tweet.title, self.supplier.name, str(self.value) + u'元')
+
+
+class Order(models.Model):
+    user = models.ForeignKey(User)
+    price = models.ForeignKey(Price)
+    number = models.IntegerField(default=0)
+
+    def __unicode__(self):
+        return ', '.join([self.user.name, self.price.tweet.title, str(self.number) + u'个'])
 
