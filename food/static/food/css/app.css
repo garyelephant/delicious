@@ -134,7 +134,7 @@ select{
     margin-top: 120px;
 }
 .menu{
-    position: fixed;
+    position: absolute;
     height: 40px;
     width: 320px;
     background: #fff;
