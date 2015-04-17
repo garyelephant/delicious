@@ -1,0 +1,14 @@
+from django.shortcuts import get_object_or_404, render
+from .models import *
+
+
+def index(request):
+    tweets = Tweet.objects.order_by('-publish_date')[:5]
+    context = {'tweets': tweets}
+    return render(request, 'food/index.html', context)
+
+
+def detail(request, tweet_id):
+    tweet = get_object_or_404(Tweet, pk=tweet_id)
+    return render(request, 'food/detail.html', {'tweet': tweet})
+

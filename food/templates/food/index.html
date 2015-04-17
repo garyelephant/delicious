@@ -1,0 +1,23 @@
+{% if tweets %}
+<div class="feed">
+    {% for tweet in tweets %}
+    <div class="card">
+        <img src="{{tweet.logo}}">
+
+        <p>{{tweet.content}}</p>
+
+        <p><a href="{% url 'food:detail' tweet.id %}">{{ tweet.title }}</a></p>
+
+        <div class="bottom">
+            <ul>
+                <li>推荐</li>
+                <li>评论</li>
+                <li>点赞</li>
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>No data<p>
+    {% endif %}
