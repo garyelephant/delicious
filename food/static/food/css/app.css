@@ -178,7 +178,7 @@ select{
     position: relative;
     width: 320px;
     text-align: center;
-    margin: 10px auto;
+    margin: 0 auto;
 }
 .menu .card img{
     width: 300px;
@@ -265,21 +265,19 @@ table tbody tr .right{
 .menu .process {
     width: 300px;
     text-align: center;
-    /*margin: 10px auto;*/
-    padding: 30px 60px 30px 60px;
-    /*padding: 3px 10px 3px 10px;*/
+    margin: 0 auto;
 
 }
 .menu .process p{
     font-size: 30px;
     position: relative;
-    left: 10px;
+    /*left: 10px;*/
     margin: 0 auto;
 }
 .menu .step{
-    width: 320px;
+    width: 300px;
     text-align: center;
-    margin: 10px auto;
+    margin: 0 auto;
 }
 .menu .step img{
     width: 300px;
@@ -289,7 +287,7 @@ table tbody tr .right{
 .menu .step p{
     width: 300px;
     margin: 0 auto;
-    padding: 3px 10px 3px 10px;
+    /*padding: 3px 10px 3px 10px;*/
     line-height: 20px;
     font-size: 10px;
 }
