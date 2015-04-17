@@ -66,9 +66,6 @@ class Procedure(models.Model):
 
 
 class Supplier(models.Model):
-    # 和tweet解耦
-    tweet = models.ManyToManyField(Tweet)
-
     name = models.CharField(max_length=200)
     link = models.CharField(max_length=200)
 
@@ -76,4 +73,11 @@ class Supplier(models.Model):
         return self.name
 
 
+class Price(models.Model):
+    tweet = models.ForeignKey(Tweet)
+    supplier = models.ForeignKey(Supplier)
 
+    price = models.FloatField(default=0)
+
+    def __unicode__(self):
+        return self.price
