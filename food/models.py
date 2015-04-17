@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+"""
+python manage.py makemigrations
+python manage.py migrate
+"""
 from django.db import models
 
 
@@ -54,14 +58,15 @@ class Procedure(models.Model):
     tweet = models.ForeignKey(Tweet)
 
     step = models.IntegerField(default=0)
-    picture = models.CharField(max_length=200)
-    content = models.CharField(max_length=200)
+    picture = models.CharField(blank=True, max_length=200)
+    content = models.CharField(max_length=500)
 
     def __unicode__(self):
         return ' - '.join([self.tweet.title, str(self.step)])
 
 
 class Supplier(models.Model):
+    # 和tweet解耦
     tweet = models.ForeignKey(Tweet)
 
     name = models.CharField(max_length=200)
