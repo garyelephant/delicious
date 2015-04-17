@@ -45,7 +45,7 @@
         </ul>
     </div>
     <div class="card">
-        <img src="{% static 'food/images/menu-pic.jpg' %}">
+        <img src="{% static 'food/images/dishes/' %}{{tweet.logo}}">
 
         <div class="bottom">
             <ul>
@@ -60,8 +60,9 @@
 
         {% for step in tweet.procedure_set.all %}
         <div class="step">
+            {% if step.picture %}
             <img src="{% static 'food/images/dishes/' %}{{ step.picture }}">
-
+            {% endif %}
             <p>{{ step.step }} - {{ step.content }}</p>
         </div>
         {% endfor %}
