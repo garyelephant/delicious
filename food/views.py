@@ -3,7 +3,7 @@ from .models import *
 
 
 def index(request):
-    tweets = Tweet.objects.order_by('-publish_date')[:5]
+    tweets = Tweet.objects.order_by('-publish_date')
     context = {'tweets': tweets}
     return render(request, 'food/index.html', context)
 
