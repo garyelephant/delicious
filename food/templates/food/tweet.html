@@ -16,6 +16,11 @@
     <!-- No Baidu Siteapp-->
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
 
+    <link type="text/css" rel="stylesheet" href="{% static 'food/materialize/css/materialize.min.css' %}"
+          media="screen,projection"/>
+    <script type="text/javascript" src="{% static 'food/js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'food/materialize/js/materialize.min.js' %}"></script>
+
     <link rel="icon" type="image/png" href="{% static 'food/images/favicon.png' %}">
 
     <!-- Add to homescreen for Chrome on Android -->
@@ -47,14 +52,28 @@
     <div class="card">
         <img src="{% static 'food/images/dishes/' %}{{tweet.logo}}">
 
-        <div class="bottom">
-            <ul>
-                <li class="list1">推荐</li>
-                <li class="list2">评论</li>
-            </ul>
+        <p>{{ tweet.title }}</p>
+
+        <div class="info">
+            <p>{{ tweet.content }}</p>
         </div>
-        <p>{{ tweet.content }}</p>
     </div>
+
+    <div class="material">
+        <p>用料</p>
+    </div>
+
+    <table>
+        <tbody>
+        {% for ingredient in tweet.ingredient_set.all %}
+        <tr>
+            <td class="left">{{ ingredient.name }}</td>
+            <td class="right">{{ ingredient.number }} {{ ingredient.unit }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
     <div class="process">
         <p>做法</p>
 
@@ -66,9 +85,36 @@
             <p>{{ step.step }} - {{ step.content }}</p>
         </div>
         {% endfor %}
-
-
     </div>
+
+    <div class="forward-head">
+        <p>买家秀</p>
+    </div>
+    <div class="bottom">
+        <ul>
+            <li><img src="../images/menu-pic.jpg"></li>
+            <li><img src="../images/menu-pic.jpg"></li>
+            <li><img src="../images/menu-pic.jpg"></li>
+        </ul>
+    </div>
+
+    <p>推荐供应商</p>
+
+    <form action="{% url 'food:tweet_buy' tweet.id %}" method="post">
+        {% csrf_token %}
+        {% for price in tweet.price_set.all %}
+        <p>
+            <input name="group1" type="radio" id="test{{ price.id }}"/>
+            <label for="test{{ price.id }}">{{ price.supplier.name }}, {{ price.value }}元</label>
+        </p>
+        {% endfor %}
+
+        <p>购买数量: <input type="text" name="number"/></p>
+
+        <p><input type="submit" value="加入购物车"/></p>
+
+    </form>
+
 </div>
 
 </body>

@@ -77,7 +77,8 @@ class Price(models.Model):
     tweet = models.ForeignKey(Tweet)
     supplier = models.ForeignKey(Supplier)
 
-    price = models.FloatField(default=0)
+    value = models.IntegerField(default=0)
 
     def __unicode__(self):
-        return self.price
+        return str(self.value)
+

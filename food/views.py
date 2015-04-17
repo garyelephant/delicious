@@ -1,3 +1,5 @@
+from django.core.urlresolvers import reverse
+from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from .models import *
 
@@ -13,4 +15,7 @@ def tweet_detail(request, tweet_id):
     return render(request, 'food/tweet.html', {'tweet': tweet})
 
 
+def tweet_buy(request, tweet_id):
+    # todo 添加订单
+    return HttpResponseRedirect(reverse('food:index'))
 

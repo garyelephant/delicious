@@ -175,6 +175,7 @@ select{
 
 
 .menu .card{
+    position: relative;
     width: 320px;
     text-align: center;
     margin: 10px auto;
@@ -186,54 +187,201 @@ select{
 }
 .menu .card p{
     width: 300px;
+    margin: 30px auto;
+    color:#EEAD0E;
+    padding: 3px 10px 3px 10px;
+    line-height: 20px;
+    font-size: 30px;
+}
+/*.menu .card .name{*/
+    /*position: absolute;*/
+    /*margin: 0 auto;*/
+/*}*/
+/*.menu .card .name p{*/
+    /*width: 300px;*/
+    /*margin: 0 auto;*/
+    /*padding: 3px 10px 3px 10px;*/
+    /*line-height: 20px;*/
+    /*font-size: 10px;*/
+}
+.menu .card .info{
+    position: absolute;
+    margin: 0 auto;
+}
+.menu .card .info p{
+    width: 300px;
+    color:#a4241f;
     margin: 0 auto;
     padding: 3px 10px 3px 10px;
     line-height: 20px;
-}
-.menu .card .bottom ul{
-    margin: 10px auto;
-    padding: 0;
-    width: 300px;
-    overflow: hidden;
-}
-.menu .card ul li.list1{
-    color:#EEAD0E;
-    width: 170px;
-    float: left;
-    text-align: right;
-    margin-left: 10px;
-    font-size: 30px;
-}
-.menu .card ul li.list2{
-    color:#000000;
-    width: 100px;
-    float: left;
     font-size: 10px;
-    margin-left: -10px;
 }
+/*.menu .card ul li.list1{*/
+    /*color:#EEAD0E;*/
+    /*width: 170px;*/
+    /*float: left;*/
+    /*text-align: right;*/
+    /*margin-left: 10px;*/
+    /*font-size: 30px;*/
+/*}*/
+
+.menu .material{
+    width: 300px;
+    text-align: center;
+    /*margin: 10px auto;*/
+    padding: 30px 60px 30px 60px;
+    /*padding: 3px 10px 3px 10px;*/
+}
+.menu .material p{
+    font-size: 30px;
+    position: absolute;
+    left: 10px;
+    margin: -10px auto;
+}
+
+table tbody tr{
+    width: 320px;
+    text-align: center;
+    margin: 10px auto;
+}
+table tbody tr .left{
+    color:#EEAD0E;
+    width: 150px;
+    margin: 0 auto;
+    padding: 3px 10px 3px 10px;
+    line-height: 20px;
+    font-size: 10px;
+
+}
+table tbody tr .right{
+    color:#EEAD0E;
+    width: 150px;
+    margin: 0 auto;
+    padding: 3px 10px 3px 10px;
+    line-height: 20px;
+    font-size: 10px;
+}
+
 .menu .process {
     width: 300px;
     text-align: center;
-    margin: 10px auto;
-    padding: 3px 10px 3px 10px;
+    /*margin: 10px auto;*/
+    padding: 30px 60px 30px 60px;
+    /*padding: 3px 10px 3px 10px;*/
+
 }
 .menu .process p{
-    font-size: 10px;
+    font-size: 30px;
     position: absolute;
     left: 10px;
+    margin: 0 auto;
 }
-.menu .process .step{
-    width: 280px;
+.menu .step{
+    width: 320px;
     text-align: center;
     margin: 10px auto;
 }
-.menu .process .step img{
-    width: 250px;
+.menu .step img{
+    width: 300px;
     height: 200px;
-    margin: 10px auto;
-}
-.menu .process .step p{
-    width: 250px;
     margin: 0 auto;
+}
+.menu .step p{
+    width: 300px;
+    margin: 0 auto;
+    padding: 3px 10px 3px 10px;
     line-height: 20px;
+    font-size: 10px;
+}
+.menu .forward-head{
+    position: relative;
+    margin: 0 auto;
+}
+.menu .forward-head p{
+    width: 320px;
+    margin: 0 auto;
+    padding: 3px 10px 3px 10px;
+    line-height: 20px;
+    font-size: 10px;
+}
+/*.menu .bottom{*/
+    /*width: 320px;*/
+    /*text-align: center;*/
+    /*margin: 10px auto;*/
+/*}*/
+.menu .bottom ul{
+    margin: 0 auto;
+    padding: 0;
+    width: 300px;
+}
+.menu .bottom ul li{
+    width: 100px;
+    float: left;
+    list-style: none;
+    /*border: 1px solid #000000;*/
+}
+.menu .bottom ul li img{
+    width: 100px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.menu .sell ul{
+    margin: 40px auto;
+    padding: 0;
+    width: 300px;
+    /*overflow: hidden*/
+}
+.menu .sell ul li{
+    width: 150px;
+    float: left;
+    list-style: none;
+    /*border: 1px solid #000000;*/
+}
+.menu .sell ul li img{
+    width: 100px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+
+.menu .shop-head{
+    position: relative;
+    margin: 0 auto;
+}
+.menu .shop-head p{
+    width: 320px;
+    margin: 0 auto;
+    padding: 3px 10px 3px 10px;
+    line-height: 20px;
+    font-size: 10px;
+}
+table tbody tr{
+    position: relative;
+    width: 320px;
+    text-align: center;
+    margin: 0 auto;
+}
+table tbody tr .shop{
+    color:#EEAD0E;
+    width: 200px;
+    margin: 0 auto;
+    padding: 3px 10px 3px 10px;
+    line-height: 20px;
+    font-size: 10px;
+
+}
+table tbody tr .price{
+    color:#EEAD0E;
+    width: 50px;
+    margin: 0 auto;
+    padding: 3px 10px 3px 10px;
+    line-height: 20px;
+    font-size: 10px;
+
+}
+table tbody tr .select img{
+    width: 50px;
+    height: 80px;
+    margin: 0 auto;
 }
