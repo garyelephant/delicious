@@ -46,13 +46,19 @@ class Ingredient(models.Model):
     number = models.IntegerField(default=0)  # 数量
     unit = models.CharField(max_length=200)  # 单位
 
+    def __unicode__(self):
+        return ' - '.join([self.tweet.title, self.name])
+
 
 class Procedure(models.Model):
     tweet = models.ForeignKey(Tweet)
 
     step = models.IntegerField(default=0)
-    photo = models.IntegerField(default=0)
+    picture = models.CharField(max_length=200)
     content = models.CharField(max_length=200)
+
+    def __unicode__(self):
+        return ' - '.join([self.tweet.title, str(self.step)])
 
 
 class Supplier(models.Model):
@@ -60,6 +66,9 @@ class Supplier(models.Model):
 
     name = models.CharField(max_length=200)
     link = models.CharField(max_length=200)
+
+    def __unicode__(self):
+        return self.name
 
 
 

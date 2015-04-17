@@ -53,39 +53,18 @@
                 <li class="list2">评论</li>
             </ul>
         </div>
-        <p>别闹，我是菜的介绍</p>
+        <p>{{ tweet.content }}</p>
     </div>
     <div class="process">
         <p>做法</p>
-        {% for step in setps %}
 
+        {% for step in tweet.procedure_set.all %}
         <div class="step">
-            <img src="{% static 'food/images/menu-pic.jpg' %}">
+            <img src="{% static 'food/images/' %}{{ step.picture }}">
 
-            <p>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+            <p>{{ step.step }} - {{ step.content }}</p>
         </div>
         {% endfor %}
-
-
-        <div class="step">
-            <img src="{% static 'food/images/menu-pic.jpg' %}">
-
-            <p>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
-        </div>
-
-
-        <div class="step">
-            <img src="{% static 'food/images/menu-pic.jpg' %}">
-
-            <p>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
-        </div>
-
-
-        <div class="step">
-            <img src="{% static 'food/images/menu-pic.jpg' %}">
-
-            <p>哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
-        </div>
 
 
     </div>
