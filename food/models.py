@@ -37,7 +37,7 @@ class Comment(models.Model):
     author = models.ForeignKey(User)
     tweet = models.ForeignKey(Tweet)
 
-    content = models.TextField()
+    content = models.CharField(max_length=300)
 
     def __unicode__(self):
         return self.content
