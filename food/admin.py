@@ -8,7 +8,7 @@ class UserAdmin(admin.ModelAdmin):
 
 
 class TweetAdmin(admin.ModelAdmin):
-    fields = ['publish_date', 'title', 'logo', 'content', 'visit']
+    fields = ['type', 'publish_date', 'title', 'logo', 'content', 'visit']
 
 
 admin.site.register(User, UserAdmin)
