@@ -38,13 +38,6 @@
 <body>
 <div class="header-info">
     <div class="header">
-        <div class="all">
-            <select>
-                <option>全部</option>
-                <option>推荐</option>
-                <option>原创</option>
-            </select>
-        </div>
         首页
         <div class="create">
             新建
@@ -62,7 +55,7 @@
 
             <p>{{tweet.content}}</p>
 
-            <p><a href="{% url 'food:tweet' tweet.id %}">{{ tweet.title }}</a></p>
+            <p><a href="{% url 'food:tweet_detail' tweet.id %}">{{ tweet.title }}</a></p>
 
             <div class="bottom">
                 <ul>
@@ -83,9 +76,9 @@
     <div class="end">
         <div class="menu">
             <ul>
-                <li>首页</li>
-                <li>发现</li>
-                <li>我</li>
+                <li><a href="/">首页</a></li>
+                <li><a href="/">发现</a></li>
+                <li><a href="/">我</a></li>
             </ul>
         </div>
     </div>

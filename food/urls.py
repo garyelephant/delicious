@@ -5,6 +5,11 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
+    # 首页
     url(r'^$', views.index, name='index'),
-    url(r'^tweet/(?P<tweet_id>[0-9]+)/$', views.tweet_detail, name='tweet'),
+
+    # 微博详情页
+    url(r'^tweet/(?P<tweet_id>[0-9]+)/$', views.tweet_detail, name='tweet_detail'),
+
+
 ]

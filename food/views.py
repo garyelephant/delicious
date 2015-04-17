@@ -12,3 +12,5 @@ def tweet_detail(request, tweet_id):
     tweet = get_object_or_404(Tweet, pk=tweet_id)
     return render(request, 'food/tweet.html', {'tweet': tweet})
 
+
+
