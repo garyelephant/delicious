@@ -1,23 +1,103 @@
-{% if tweets %}
+<!doctype html>
+{% load staticfiles %}
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>黑客马拉松－kitchen</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="{% static 'food/images/favicon.png' %}">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="{% static 'food/images/app-icon72x72@2x.png' %}">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="{% static 'food/images/app-icon72x72@2x.png' %}">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="{% static 'food/images/app-icon72x72@2x.png' %}">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <link rel="stylesheet" href="{% static 'food/css/amazeui.min.css' %}">
+    <link rel="stylesheet" href="{% static 'food/css/app.css' %}">
+</head>
+<body>
+<div class="header-info">
+    <div class="header">
+        <div class="all">
+            <select>
+                <option>全部</option>
+                <option>推荐</option>
+                <option>原创</option>
+            </select>
+        </div>
+        首页
+        <div class="create">
+            新建
+        </div>
+    </div>
+</div>
+
+
 <div class="feed">
-    {% for tweet in tweets %}
-    <div class="card">
-        <img src="{{tweet.logo}}">
+    {% if tweets %}
+    <div class="feed">
+        {% for tweet in tweets %}
+        <div class="card">
+            <img src="{% static 'food/images/' %}{{tweet.logo}}">
 
-        <p>{{tweet.content}}</p>
+            <p>{{tweet.content}}</p>
 
-        <p><a href="{% url 'food:tweet' tweet.id %}">{{ tweet.title }}</a></p>
+            <p><a href="{% url 'food:tweet' tweet.id %}">{{ tweet.title }}</a></p>
 
-        <div class="bottom">
+            <div class="bottom">
+                <ul>
+                    <li>推荐</li>
+                    <li>评论</li>
+                    <li>点赞</li>
+                </ul>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>No data</p>
+    {% endif %}
+</div>
+
+<div class="end-info">
+    <div class="end">
+        <div class="menu">
             <ul>
-                <li>推荐</li>
-                <li>评论</li>
-                <li>点赞</li>
+                <li>首页</li>
+                <li>发现</li>
+                <li>我</li>
             </ul>
         </div>
     </div>
-    {% endfor %}
 </div>
-{% else %}
-<p>No data<p>
-    {% endif %}
+
+
+<!--在这里编写你的代码-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="{% static 'food/assets/js/jquery.min.js' %}"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<![endif]-->
+</body>
+</html>

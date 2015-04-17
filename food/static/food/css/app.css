@@ -1,0 +1,239 @@
+/* Write your styles */
+
+
+.header-info{
+    position: fixed;
+    height: 40px;
+    width: 320px;
+    background: #000;
+    margin-top: -10px;
+}
+.header-info .header{
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    position: relative;
+}
+select{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.create{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 20px;
+}
+
+.feed{
+    width: 320px;
+}
+.feed .card{
+    width: 320px;
+    text-align: center;
+    margin: 10px auto;
+}
+.feed .card img{
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+}
+.feed .card p{
+    width: 300px;
+    margin: 0 auto;
+    padding: 3px 10px 3px 10px;
+    line-height: 20px;
+}
+.feed .card .bottom ul{
+    margin: 10px auto;
+    padding: 0;
+    width: 300px;
+    overflow: hidden;
+}
+.feed .card .bottom ul li{
+    width: 100px;
+    float: left;
+    list-style: none;
+    border: 1px solid #000000;
+}
+
+.end-info{
+    position: fixed;
+    height: 40px;
+    width: 320px;
+    background: #000;
+    /*margin-top: -10px;*/
+    bottom: 0;
+}
+.end-info .end{
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    position: relative;
+}
+.end-info .end ul{
+    margin: 0 auto;
+    padding: 0;
+    width: 300px;
+    overflow: hidden;
+}
+.end-info .end ul li{
+    width: 100px;
+    float: left;
+    list-style: none;
+    border: 1px solid #000000;
+}
+
+.create-menu{
+    position: fixed;
+    height: 40px;
+    width: 320px;
+    background: #fff;
+}
+.create-menu .header{
+    color: #63B8FF  ;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    position: relative;
+}
+.create-menu .header ul{
+    margin: 0 auto;
+    padding: 0;
+    width: 300px;
+    overflow: hidden;
+}
+.create-menu .header ul li{
+    width: 100px;
+    float: left;
+    list-style: none;
+    font-size: 20px;
+}
+.create-menu .header ul li.list1{
+    color:#EEAD0E;
+    margin-left: -20px;
+    font-size: 15px;
+}
+.create-menu .header ul li.list2{
+    color:#000000;
+    margin-left: 10px;
+}
+.create-menu .header ul li.list3{
+    color:#EEAD0E;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.input-info{
+    position: relative;
+    height: 40px;
+    width: 320px;
+    margin-top: 120px;
+}
+.menu{
+    position: fixed;
+    height: 40px;
+    width: 320px;
+    background: #fff;
+}
+.menu .header{
+    color: #63B8FF  ;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    position: relative;
+}
+.menu .header ul{
+    margin: 0 auto;
+    padding: 0;
+    width: 300px;
+    overflow: hidden;
+}
+.menu .header ul li{
+    width: 100px;
+    float: left;
+    list-style: none;
+    font-size: 20px;
+}
+.menu .header ul li.list1{
+    color:#EEAD0E;
+    margin-left: -20px;
+    font-size: 20px;
+}
+.menu .header ul li.list2{
+    color:#000000;
+    margin-left: 10px;
+}
+.menu .header ul li.list3{
+    color:#EEAD0E;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+
+.menu .card{
+    width: 320px;
+    text-align: center;
+    margin: 10px auto;
+}
+.menu .card img{
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+}
+.menu .card p{
+    width: 300px;
+    margin: 0 auto;
+    padding: 3px 10px 3px 10px;
+    line-height: 20px;
+}
+.menu .card .bottom ul{
+    margin: 10px auto;
+    padding: 0;
+    width: 300px;
+    overflow: hidden;
+}
+.menu .card ul li.list1{
+    color:#EEAD0E;
+    width: 170px;
+    float: left;
+    text-align: right;
+    margin-left: 10px;
+    font-size: 30px;
+}
+.menu .card ul li.list2{
+    color:#000000;
+    width: 100px;
+    float: left;
+    font-size: 10px;
+    margin-left: -10px;
+}
+.menu .process {
+    width: 300px;
+    text-align: center;
+    margin: 10px auto;
+    padding: 3px 10px 3px 10px;
+}
+.menu .process p{
+    font-size: 10px;
+    position: absolute;
+    left: 10px;
+}
+.menu .process .step{
+    width: 280px;
+    text-align: center;
+    margin: 10px auto;
+}
+.menu .process .step img{
+    width: 250px;
+    height: 200px;
+    margin: 10px auto;
+}
+.menu .process .step p{
+    width: 250px;
+    margin: 0 auto;
+    line-height: 20px;
+}
