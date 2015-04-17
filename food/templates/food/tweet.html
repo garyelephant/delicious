@@ -60,7 +60,7 @@
 
         {% for step in tweet.procedure_set.all %}
         <div class="step">
-            <img src="{% static 'food/images/' %}{{ step.picture }}">
+            <img src="{% static 'food/images/dishes/' %}{{ step.picture }}">
 
             <p>{{ step.step }} - {{ step.content }}</p>
         </div>

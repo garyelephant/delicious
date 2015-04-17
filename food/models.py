@@ -67,7 +67,7 @@ class Procedure(models.Model):
 
 class Supplier(models.Model):
     # 和tweet解耦
-    tweet = models.ForeignKey(Tweet)
+    tweet = models.ManyToManyField(Tweet)
 
     name = models.CharField(max_length=200)
     link = models.CharField(max_length=200)
