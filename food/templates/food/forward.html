@@ -58,64 +58,7 @@
             <p>{{ tweet.content }}</p>
         </div>
     </div>
-
-    <div class="material">
-        <p>用料</p>
-    </div>
-
-    <table>
-        <tbody>
-        {% for ingredient in tweet.ingredient_set.all %}
-        <tr>
-            <td class="left">{{ ingredient.name }}</td>
-            <td class="right">{{ ingredient.number }} {{ ingredient.unit }}</td>
-        </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <div class="process">
-        <p>做法</p>
-
-        {% for step in tweet.procedure_set.all %}
-        <div class="step">
-            {% if step.picture %}
-            <img src="{% static 'food/images/dishes/' %}{{ step.picture }}">
-            {% endif %}
-            <p>{{ step.step }} - {{ step.content }}</p>
-        </div>
-        {% endfor %}
-    </div>
-
-    <div class="forward-head">
-        <p>买家秀</p>
-    </div>
-    <div class="bottom">
-        <ul>
-            <li><img src="../images/menu-pic.jpg"></li>
-            <li><img src="../images/menu-pic.jpg"></li>
-            <li><img src="../images/menu-pic.jpg"></li>
-        </ul>
-    </div>
-
-    <p>推荐供应商</p>
-
-    <form action="{% url 'food:tweet_buy' tweet.id %}" method="post">
-        {% csrf_token %}
-        <input type="hidden" name="user" value="3"/>
-        {% for price in tweet.price_set.all %}
-        <p>
-            <input name="price" value="{{ price.id }}" type="radio" id="price{{ price.id }}" checked="true"/>
-            <label for="price{{ price.id }}">{{ price.supplier.name }}, {{ price.value }}元</label>
-        </p>
-        {% endfor %}
-
-        <p>购买数量: <input type="text" name="number" value="1"/></p>
-
-        <p><input type="submit" value="加入购物车"/></p>
-
-    </form>
-
+    <p>做法</p>
 </div>
 
 </body>
