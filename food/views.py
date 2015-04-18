@@ -37,7 +37,8 @@ def tweet_buy(request, tweet_id):
     price_ud = int(request.POST['price'])
     number = int(request.POST['number'])
 
-    order = Order.objects.filter(user=User.objects.get(pk=user_id), price=Price.objects.get(pk=price_ud)).all()
+    order = Order.objects.filter(user=User.objects.get(pk=user_id), price=Price.objects.get(pk=price_ud),
+                                 has_paid=False).all()
     if order:
         order = order[0]
         order.number += number
@@ -50,6 +51,22 @@ def tweet_buy(request, tweet_id):
 def cart(request):
     orders = Order.objects.filter(has_paid=False).all()
     total = sum([o.number * o.price.value for o in orders])
-    user = orders[0].user.name
+    user = orders[0].user if orders else ''
+
     context = {'user': user, 'orders': orders, 'total': total}
     return render(request, 'food/cart.html', context)
+
+
+def cart_paid(request):
+    return render(request, 'food/paid.html')
+
+
+def cart_buy(request):
+    user_id = int(request.POST['user'])
+
+    orders = Order.objects.filter(user=User.objects.get(pk=user_id)).all()
+    for o in orders:
+        o.has_paid = True
+        o.save()
+
+    return HttpResponseRedirect(reverse('food:cart_paid'))
