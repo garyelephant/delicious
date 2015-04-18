@@ -1,50 +1,19 @@
 {% extends "food/base.html" %}
 {% load staticfiles %}
+{% block header_name %}发现{% endblock %}
 {% block page_content %}
-<nav>
-    <div class="nav-wrapper">
-        <form>
-            <div class="input-field">
-                <input id="search" type="search" required>
-                <label for="search"><i class="mdi-action-search"></i></label>
-                <i class="mdi-navigation-close"></i>
-            </div>
-        </form>
-    </div>
-</nav>
-<a class="waves-effect waves-light btn">Stuff</a>
-<a class="waves-effect waves-light btn">Stuff</a>
-<a class="waves-effect waves-light btn">Stuff</a>
-
-<div class="col s12 m2">
-    <p class="z-depth-1">z-depth-1</p>
-</div>
-<div class="col s12 m2">
-    <p class="z-depth-2">z-depth-2</p>
-</div>
-<div class="col s12 m2">
-    <p class="z-depth-3">z-depth-3</p>
-</div>
-<div class="col s12 m2">
-    <p class="z-depth-4">z-depth-4</p>
-</div>
-<div class="col s12 m2">
-    <p class="z-depth-5">z-depth-5</p>
-</div>
-
-<img class="responsive-img" src="/food/static/food/images/user_avatar/craftsman_1.jpg">
-<div class="col s12 m8 offset-m2 l6 offset-l3">
-    <div class="card-panel grey lighten-5 z-depth-1">
-        <div class="row valign-wrapper">
-            <div class="col s2">
-                <img src="../../static/food/images/user_avatar/craftsman_1.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-            </div>
-            <div class="col s10">
-              <span class="black-text">
-                This is a square image. Add the "circle" class to it to make it appear circular.
-              </span>
-            </div>
+<div>
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s4"><a href="#test1">本季推荐</a></li>
+                <li class="tab col s4"><a class="active" href="#test2">本周评论最多</a></li>
+                <li class="tab col s4"><a href="#test3">本周购买最多</a></li>
+            </ul>
         </div>
+        <div id="test1" class="col s12">本季推荐菜谱</div>
+        <div id="test2" class="col s12">本周评论最多菜谱</div>
+        <div id="test3" class="col s12">本周购买最多的菜谱</div>
     </div>
 </div>
 {% endblock %}
