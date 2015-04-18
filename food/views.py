@@ -13,15 +13,19 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         return Tweet.objects.order_by('-publish_date')
 
+
 def found(request):
     return render(request, 'food/found.html')
 
-def discuss(request):
-    return render(request, 'food/discuss.html')
 
 class TweetDetailView(generic.DetailView):
     model = Tweet
     template_name = 'food/tweet.html'
+
+
+class DiscussView(generic.DetailView):
+    model = Tweet
+    template_name = 'food/discuss.html'
 
 
 def tweet_buy(request, tweet_id):

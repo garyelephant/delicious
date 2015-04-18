@@ -14,8 +14,9 @@
             <ul>
                 <a class="btn-floating btn-medium waves-effect waves-light red"><i
                         class="tiny mdi-social-share"></i></a>
-                <a class="btn-floating btn-medium waves-effect waves-light red"><i
-                        class="tiny mdi-editor-mode-comment"></i></a>
+                <a class="btn-floating btn-medium waves-effect waves-light red"
+                   href="{% url 'food:discuss' tweet.id %}">
+                    <i class="tiny mdi-editor-mode-comment"></i></a>
                 <a class="btn-floating btn-medium waves-effect waves-light red"><i class="tiny mdi-action-thumb-up"></i></a>
             </ul>
         </div>
