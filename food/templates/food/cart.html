@@ -19,10 +19,12 @@
             <td>￥{{ order.price.value }}</td>
             <td>{{ order.price.supplier.name }}</td>
             <td>
-            <th><a class="btn-floating btn-small waves-effect waves-light blue-grey" onclick="remove_one_dish"><i
+            <th><a class="btn-floating btn-small waves-effect waves-light blue-grey"
+                   href="{% url 'food:order_decrease' order.id %}"><i
                     class="mdi-content-remove"></i></a></th>
             <th><input value="{{ order.number }}" id="number" type="text" class="validate" length="2"/></th>
-            <th><a class="btn-floating btn-small waves-effect waves-light green"><i class="mdi-content-add"></i></a>
+            <th><a class="btn-floating btn-small waves-effect waves-light green"
+                   href="{% url 'food:order_increase' order.id %}"><i class="mdi-content-add"></i></a>
             </th>
             </td>
         </tr>

@@ -70,3 +70,20 @@ def cart_buy(request):
         o.save()
 
     return HttpResponseRedirect(reverse('food:cart_paid'))
+
+
+def order_increase(request, pk):
+    order = Order.objects.get(pk=pk)
+    order.number += 1
+    order.save()
+    return HttpResponseRedirect(reverse('food:cart'))
+
+
+def order_decrease(request, pk):
+    order = Order.objects.get(pk=pk)
+    if order.number == 1:
+        order.delete()
+    else:
+        order.number -= 1
+        order.save()
+    return HttpResponseRedirect(reverse('food:cart'))
