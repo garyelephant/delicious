@@ -18,6 +18,11 @@ def cart(request):
     context = {'user': user, 'orders': orders, 'total': total}
     return render(request, 'food/cart.html', context)
 
+def found(request):
+    return render(request, 'food/found.html')
+
+def discuss(request):
+    return render(request, 'food/discuss.html')
 
 def tweet_detail(request, tweet_id):
     tweet = get_object_or_404(Tweet, pk=tweet_id)
