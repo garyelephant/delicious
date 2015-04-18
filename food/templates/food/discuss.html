@@ -24,16 +24,22 @@
 
 
 <div class="row">
-    <div class="input-field col s6">
-        <input value="" id="first_name2" type="text" class="validate">
-        <label class="active" for="first_name2">输入你的评论信息<i class="mdi-file-cloud left"></i></label>
+    <form action="{% url 'food:discuss_add'%}" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="tweet_id" value="{{ tweet.id }}"/>
+        <input type="hidden" name="user_id" value="3"/>
 
-    </div>
-    <div class="col s6">
-        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-            <i class="mdi-content-send right"></i>
-        </button>
-    </div>
+        <div class="input-field col s6">
+            <input name="content" id="content" type="text" class="validate">
+            <label class="active" for="content">输入你的评论信息<i class="mdi-file-cloud left"></i></label>
+
+        </div>
+        <div class="col s6">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="mdi-content-send right"></i>
+            </button>
+        </div>
+    </form>
 </div>
 <br/>
 <br/>

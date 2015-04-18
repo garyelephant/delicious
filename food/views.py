@@ -48,6 +48,17 @@ def tweet_buy(request, tweet_id):
     return HttpResponseRedirect(reverse('food:cart'))
 
 
+def discuss_add(request):
+    user_id = int(request.POST['user_id'])
+    tweet_id = int(request.POST['tweet_id'])
+    content = request.POST['content']
+
+    comment = Comment(author=User.objects.get(pk=user_id), tweet=Tweet.objects.get(pk=tweet_id), content=content)
+    comment.save()
+
+    return HttpResponseRedirect(reverse('food:discuss', args=(tweet_id,)))
+
+
 def cart(request):
     orders = Order.objects.filter(has_paid=False).all()
     total = sum([o.number * o.price.value for o in orders])
