@@ -134,10 +134,10 @@ select{
     margin-top: 120px;
 }
 .menu{
-    position: absolute;
+    position: relative;
     height: 40px;
     width: 320px;
-    background: #fff;
+    background: #EE6E73;
 }
 .menu .header{
     color: #63B8FF  ;
@@ -159,16 +159,16 @@ select{
     font-size: 20px;
 }
 .menu .header ul li.list1{
-    color:#EEAD0E;
+    color:#ffffff;
     margin-left: -20px;
     font-size: 20px;
 }
 .menu .header ul li.list2{
-    color:#000000;
+    color:#ffffff;
     margin-left: 10px;
 }
 .menu .header ul li.list3{
-    color:#EEAD0E;
+    color:#ffffff;
     margin-left: 10px;
     font-size: 15px;
 }
@@ -178,7 +178,7 @@ select{
     position: relative;
     width: 320px;
     text-align: center;
-    margin: 10px auto;
+    margin: 0 auto;
 }
 .menu .card img{
     width: 300px;
@@ -205,7 +205,7 @@ select{
     /*font-size: 10px;*/
 }
 .menu .card .info{
-    position: absolute;
+    position: relative;
     margin: 0 auto;
 }
 .menu .card .info p{
@@ -228,15 +228,15 @@ select{
 .menu .material{
     width: 300px;
     text-align: center;
-    /*margin: 10px auto;*/
-    padding: 30px 60px 30px 60px;
+    margin: 0 auto;
+    /*padding: 30px 60px 30px 60px;*/
     /*padding: 3px 10px 3px 10px;*/
 }
 .menu .material p{
     font-size: 30px;
-    position: absolute;
+    position: relative;
     left: 10px;
-    margin: -10px auto;
+    margin: 0 auto;
 }
 
 table tbody tr{
@@ -265,21 +265,18 @@ table tbody tr .right{
 .menu .process {
     width: 300px;
     text-align: center;
-    /*margin: 10px auto;*/
-    padding: 30px 60px 30px 60px;
-    /*padding: 3px 10px 3px 10px;*/
+    margin: 0 auto;
 
 }
 .menu .process p{
     font-size: 30px;
-    position: absolute;
-    left: 10px;
+    position: relative;
     margin: 0 auto;
 }
 .menu .step{
-    width: 320px;
+    width: 300px;
     text-align: center;
-    margin: 10px auto;
+    margin: 0 auto;
 }
 .menu .step img{
     width: 300px;
@@ -289,7 +286,7 @@ table tbody tr .right{
 .menu .step p{
     width: 300px;
     margin: 0 auto;
-    padding: 3px 10px 3px 10px;
+    /*padding: 3px 10px 3px 10px;*/
     line-height: 20px;
     font-size: 10px;
 }
