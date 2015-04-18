@@ -370,56 +370,56 @@ table tbody tr .select img{
     margin: 0 auto;
 }
 
-.foward{
+.forward{
     position: relative;
     height: 40px;
     width: 375px;
     background: #EE6E73;
 }
-.foward .header{
+.forward .header{
     color: #63B8FF  ;
     text-align: center;
     line-height: 40px;
     font-size: 20px;
     position: relative;
 }
-.foward .header ul{
+.forward .header ul{
     margin: 0 auto;
     padding: 0;
     width: 375px;
     overflow: hidden;
 }
-.foward .header ul li{
+.forward .header ul li{
     width: 125px;
     float: left;
     list-style: none;
     font-size: 20px;
 }
-.foward .header ul li.list1{
+.forward .header ul li.list1{
     color:#ffffff;
     font-size: 20px;
 }
-.foward .header ul li.list2{
+.forward .header ul li.list2{
     color:#ffffff;
 }
-.foward .header ul li.list3{
+.forward .header ul li.list3{
     color:#ffffff;
     font-size: 20px;
 }
 
 
-.foward .card{
+.forward .card{
     position: relative;
     width: 375px;
     text-align: center;
     margin: 0 auto;
 }
-.foward .card img{
+.forward .card img{
     width: 360px;
     height: 230px;
     margin: 0 auto;
 }
-.foward .card p{
+.forward .card p{
     width: 360px;
     margin: 10px auto;
     color:#EEAD0E;
@@ -427,11 +427,11 @@ table tbody tr .select img{
     line-height: 20px;
     font-size: 30px;
 }
-.foward .card .info{
+.forward .card .info{
     position: relative;
     margin: 0 auto;
 }
-.foward .card .info p{
+.forward .card .info p{
     width: 360px;
     color:#a4241f;
     margin: 0 auto;
