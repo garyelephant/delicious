@@ -1,2 +1,4 @@
 *.pyc
 .idea
+*.zip
+site-packages
