@@ -24,6 +24,9 @@ def found(request):
 def discuss(request):
     return render(request, 'food/discuss.html')
 
+def forward(request):
+    return render(request, 'food/forward.html')
+
 def tweet_detail(request, tweet_id):
     tweet = get_object_or_404(Tweet, pk=tweet_id)
     return render(request, 'food/tweet.html', {'tweet': tweet})
