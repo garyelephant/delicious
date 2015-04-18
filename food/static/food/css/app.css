@@ -137,7 +137,7 @@ select{
     position: relative;
     height: 40px;
     width: 320px;
-    background: #fff;
+    background: #EE6E73;
 }
 .menu .header{
     color: #63B8FF  ;
@@ -159,16 +159,16 @@ select{
     font-size: 20px;
 }
 .menu .header ul li.list1{
-    color:#EEAD0E;
+    color:#ffffff;
     margin-left: -20px;
     font-size: 20px;
 }
 .menu .header ul li.list2{
-    color:#000000;
+    color:#ffffff;
     margin-left: 10px;
 }
 .menu .header ul li.list3{
-    color:#EEAD0E;
+    color:#ffffff;
     margin-left: 10px;
     font-size: 15px;
 }
@@ -228,8 +228,8 @@ select{
 .menu .material{
     width: 300px;
     text-align: center;
-    /*margin: 10px auto;*/
-    padding: 30px 60px 30px 60px;
+    margin: 0 auto;
+    /*padding: 30px 60px 30px 60px;*/
     /*padding: 3px 10px 3px 10px;*/
 }
 .menu .material p{
@@ -271,7 +271,6 @@ table tbody tr .right{
 .menu .process p{
     font-size: 30px;
     position: relative;
-    /*left: 10px;*/
     margin: 0 auto;
 }
 .menu .step{
