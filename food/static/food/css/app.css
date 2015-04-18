@@ -136,7 +136,7 @@ select{
 .menu{
     position: relative;
     height: 40px;
-    width: 320px;
+    width: 375px;
     background: #EE6E73;
 }
 .menu .header{
@@ -149,11 +149,11 @@ select{
 .menu .header ul{
     margin: 0 auto;
     padding: 0;
-    width: 300px;
+    width: 360px;
     overflow: hidden;
 }
 .menu .header ul li{
-    width: 100px;
+    width: 120px;
     float: left;
     list-style: none;
     font-size: 20px;
@@ -176,18 +176,18 @@ select{
 
 .menu .card{
     position: relative;
-    width: 320px;
+    width: 375px;
     text-align: center;
     margin: 0 auto;
 }
 .menu .card img{
-    width: 300px;
-    height: 200px;
+    width: 360px;
+    height: 230px;
     margin: 0 auto;
 }
 .menu .card p{
-    width: 300px;
-    margin: 30px auto;
+    width: 360px;
+    margin: 0 auto;
     color:#EEAD0E;
     padding: 3px 10px 3px 10px;
     line-height: 20px;
@@ -209,7 +209,7 @@ select{
     margin: 0 auto;
 }
 .menu .card .info p{
-    width: 300px;
+    width: 360px;
     color:#a4241f;
     margin: 0 auto;
     padding: 3px 10px 3px 10px;
@@ -226,7 +226,7 @@ select{
 /*}*/
 
 .menu .material{
-    width: 300px;
+    width: 360px;
     text-align: center;
     margin: 0 auto;
     /*padding: 30px 60px 30px 60px;*/
@@ -240,13 +240,13 @@ select{
 }
 
 table tbody tr{
-    width: 320px;
+    width: 375px;
     text-align: center;
     margin: 10px auto;
 }
 table tbody tr .left{
     color:#EEAD0E;
-    width: 150px;
+    width: 180px;
     margin: 0 auto;
     padding: 3px 10px 3px 10px;
     line-height: 20px;
@@ -255,7 +255,7 @@ table tbody tr .left{
 }
 table tbody tr .right{
     color:#EEAD0E;
-    width: 150px;
+    width: 180px;
     margin: 0 auto;
     padding: 3px 10px 3px 10px;
     line-height: 20px;
@@ -263,7 +263,7 @@ table tbody tr .right{
 }
 
 .menu .process {
-    width: 300px;
+    width: 360px;
     text-align: center;
     margin: 0 auto;
 
@@ -274,17 +274,17 @@ table tbody tr .right{
     margin: 0 auto;
 }
 .menu .step{
-    width: 300px;
+    width: 360px;
     text-align: center;
     margin: 0 auto;
 }
 .menu .step img{
-    width: 300px;
+    width: 360px;
     height: 200px;
     margin: 0 auto;
 }
 .menu .step p{
-    width: 300px;
+    width: 360px;
     margin: 0 auto;
     /*padding: 3px 10px 3px 10px;*/
     line-height: 20px;
@@ -295,7 +295,7 @@ table tbody tr .right{
     margin: 0 auto;
 }
 .menu .forward-head p{
-    width: 320px;
+    width: 375px;
     margin: 0 auto;
     padding: 3px 10px 3px 10px;
     line-height: 20px;
@@ -309,34 +309,34 @@ table tbody tr .right{
 .menu .bottom ul{
     margin: 0 auto;
     padding: 0;
-    width: 300px;
+    width: 360px;
 }
 .menu .bottom ul li{
-    width: 100px;
+    width: 120px;
     float: left;
     list-style: none;
     /*border: 1px solid #000000;*/
 }
 .menu .bottom ul li img{
-    width: 100px;
+    width: 120px;
     height: 80px;
     margin: 0 auto;
 }
 
 .menu .sell ul{
-    margin: 40px auto;
+    margin: 0 auto;
     padding: 0;
-    width: 300px;
+    width: 360px;
     /*overflow: hidden*/
 }
 .menu .sell ul li{
-    width: 150px;
+    width: 180px;
     float: left;
     list-style: none;
     /*border: 1px solid #000000;*/
 }
 .menu .sell ul li img{
-    width: 100px;
+    width: 120px;
     height: 80px;
     margin: 0 auto;
 }
@@ -347,7 +347,7 @@ table tbody tr .right{
     margin: 0 auto;
 }
 .menu .shop-head p{
-    width: 320px;
+    width: 375px;
     margin: 0 auto;
     padding: 3px 10px 3px 10px;
     line-height: 20px;
@@ -361,7 +361,7 @@ table tbody tr{
 }
 table tbody tr .shop{
     color:#EEAD0E;
-    width: 200px;
+    width: 240px;
     margin: 0 auto;
     padding: 3px 10px 3px 10px;
     line-height: 20px;
@@ -370,7 +370,7 @@ table tbody tr .shop{
 }
 table tbody tr .price{
     color:#EEAD0E;
-    width: 50px;
+    width: 60px;
     margin: 0 auto;
     padding: 3px 10px 3px 10px;
     line-height: 20px;
@@ -378,7 +378,7 @@ table tbody tr .price{
 
 }
 table tbody tr .select img{
-    width: 50px;
+    width: 60px;
     height: 80px;
     margin: 0 auto;
 }
