@@ -87,6 +87,7 @@ class Order(models.Model):
     user = models.ForeignKey(User)
     price = models.ForeignKey(Price)
     number = models.IntegerField(default=0)
+    has_paid = models.BooleanField(default=False)
 
     def __unicode__(self):
         return ', '.join([self.user.name, self.price.tweet.title, str(self.number) + u'个'])

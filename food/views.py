@@ -18,7 +18,6 @@ def found(request):
     return render(request, 'food/found.html')
 
 
-
 def forward(request):
     return render(request, 'food/forward.html')
 
@@ -34,16 +33,22 @@ class DiscussView(generic.DetailView):
 
 
 def tweet_buy(request, tweet_id):
-    user = int(request.POST['user'])
+    user_id = int(request.POST['user'])
+    price_ud = int(request.POST['price'])
     number = int(request.POST['number'])
-    price = int(request.POST['price'])
-    o = Order(user=User.objects.get(pk=user), price=Price.objects.get(pk=price), number=number)
-    o.save()
+
+    order = Order.objects.filter(user=User.objects.get(pk=user_id), price=Price.objects.get(pk=price_ud)).all()
+    if order:
+        order = order[0]
+        order.number += number
+    else:
+        order = Order(user=User.objects.get(pk=user_id), price=Price.objects.get(pk=price_ud), number=number)
+    order.save()
     return HttpResponseRedirect(reverse('food:cart'))
 
 
 def cart(request):
-    orders = Order.objects.all()
+    orders = Order.objects.filter(has_paid=False).all()
     total = sum([o.number * o.price.value for o in orders])
     user = orders[0].user.name
     context = {'user': user, 'orders': orders, 'total': total}
