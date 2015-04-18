@@ -1,12 +1,7 @@
 {% extends "food/base.html" %}
 {% load staticfiles %}
+{% block header_name %}评论{% endblock %}
 {% block page_content %}
-<nav>
-    <div class="nav-wrapper">
-        <a href="#" class="brand-logo">评论</a>
-    </div>
-</nav>
-
 {% for comment in tweet.comment_set.all %}
 <div class="col s12 m8 offset-m2 l6 offset-l3">
     <div class="card-panel grey lighten-5 z-depth-1">
