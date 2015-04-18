@@ -18,14 +18,11 @@ def found(request):
     return render(request, 'food/found.html')
 
 
-<<<<<<< HEAD
+
 def forward(request):
     return render(request, 'food/forward.html')
 
-def tweet_detail(request, tweet_id):
-    tweet = get_object_or_404(Tweet, pk=tweet_id)
-    return render(request, 'food/tweet.html', {'tweet': tweet})
-=======
+
 class TweetDetailView(generic.DetailView):
     model = Tweet
     template_name = 'food/tweet.html'
@@ -34,7 +31,6 @@ class TweetDetailView(generic.DetailView):
 class DiscussView(generic.DetailView):
     model = Tweet
     template_name = 'food/discuss.html'
->>>>>>> 77bd51e54242f1a52675b5092739d46912d05733
 
 
 def tweet_buy(request, tweet_id):

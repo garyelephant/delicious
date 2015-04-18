@@ -8,26 +8,15 @@
             <img class="activator" src="{% static 'food/images/dishes/' %}{{tweet.logo}}">
         </div>
         <div class="card-content">
-<<<<<<< HEAD
-          <span class="card-title activator grey-text text-darken-4"><a href="{% url 'food:tweet_detail' tweet.id %}">{{ tweet.title }}</a><i class="mdi-navigation-more-vert right"></i></span>
-          <ul>
-            <!--<a class="btn-floating btn-medium waves-effect waves-light red"><i class="tiny mdi-social-share"></i></a>-->
-            <a class="btn-floating btn-medium waves-effect waves-light red"><i class="tiny mdi-editor-mode-comment"></i></a>
-            <a class="btn-floating btn-medium waves-effect waves-light red"><i class="tiny mdi-action-thumb-up"></i></a>
-          </ul>
-=======
             <span class="card-title activator grey-text text-darken-4">
                 <a href="{% url 'food:tweet_detail' tweet.id %}">{{ tweet.title }}</a>
                 <i class="mdi-navigation-more-vert right"></i></span>
             <ul>
-                <a class="btn-floating btn-medium waves-effect waves-light red"><i
-                        class="tiny mdi-social-share"></i></a>
                 <a class="btn-floating btn-medium waves-effect waves-light red"
                    href="{% url 'food:discuss' tweet.id %}">
                     <i class="tiny mdi-editor-mode-comment"></i></a>
                 <a class="btn-floating btn-medium waves-effect waves-light red"><i class="tiny mdi-action-thumb-up"></i></a>
             </ul>
->>>>>>> 77bd51e54242f1a52675b5092739d46912d05733
         </div>
         <div class="card-reveal">
             <span class="card-title grey-text text-darken-4">{{ tweet.title }}
