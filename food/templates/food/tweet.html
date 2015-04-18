@@ -102,15 +102,15 @@
 
     <form action="{% url 'food:tweet_buy' tweet.id %}" method="post">
         {% csrf_token %}
-        <input type="hidden" name="user" value="3">
+        <input type="hidden" name="user" value="3"/>
         {% for price in tweet.price_set.all %}
         <p>
-            <input name="price" value="{{ price.id }}" type="radio" id="price{{ price.id }}"/>
+            <input name="price" value="{{ price.id }}" type="radio" id="price{{ price.id }}" checked="true"/>
             <label for="price{{ price.id }}">{{ price.supplier.name }}, {{ price.value }}元</label>
         </p>
         {% endfor %}
 
-        <p>购买数量: <input type="text" name="number"/></p>
+        <p>购买数量: <input type="text" name="number" value="1"/></p>
 
         <p><input type="submit" value="加入购物车"/></p>
 
